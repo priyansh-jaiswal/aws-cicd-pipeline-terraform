@@ -11,7 +11,7 @@ def home():
     return jsonify({
         'message':     'AWS CI/CD Pipeline - Flask App',
         'status':      'running',
-        'version':     '1.0.0',
+        'version':     '2.0.0',
         'deployed_by': 'AWS CodePipeline + ECS',
         'timestamp':   str(datetime.datetime.now())
     })
