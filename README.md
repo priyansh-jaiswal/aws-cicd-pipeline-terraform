@@ -19,23 +19,25 @@ Code Push → GitHub → CodePipeline → CodeBuild → ECR (Docker Image) → E
 - **Permissions:** AWS IAM
 
 ## Project Structure
+
+```
 cicd-project/
 ├── app.py                  ← Flask application
 ├── requirements.txt        ← Python dependencies
 ├── Dockerfile              ← Container configuration
 ├── buildspec.yml           ← CodeBuild instructions
 └── terraform/
-├── main.tf
-├── variables.tf
-├── outputs.tf
-├── terraform.tfvars
-└── modules/
-├── ecr/            ← Container registry
-├── iam/            ← IAM roles
-├── alb/            ← Load balancer
-├── ecs/            ← Container runtime
-└── codepipeline/   ← CI/CD pipeline
-
+    ├── main.tf
+    ├── variables.tf
+    ├── outputs.tf
+    ├── terraform.tfvars
+    └── modules/
+        ├── ecr/            ← Container registry
+        ├── iam/            ← IAM roles
+        ├── alb/            ← Load balancer
+        ├── ecs/            ← Container runtime
+        └── codepipeline/   ← CI/CD pipeline
+```
 ## How the Pipeline Works
 1. Developer pushes code to GitHub
 2. CodePipeline detects the push automatically via webhook
