@@ -1,5 +1,5 @@
-# ── Base image ───────────────────────────────────────────────────
-FROM python:3.12-slim
+# ── Base image from AWS ECR Public (no rate limits) ──────────────
+FROM public.ecr.aws/docker/library/python:3.12-slim
 
 # ── Set working directory ─────────────────────────────────────────
 WORKDIR /app
